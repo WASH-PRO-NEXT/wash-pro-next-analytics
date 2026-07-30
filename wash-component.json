@@ -1,7 +1,10 @@
 {
   "id": "wash-pro-next-analytics",
   "kind": "component",
-  "name": { "ru": "Аналитика", "en": "Analytics" },
+  "name": {
+    "ru": "Аналитика",
+    "en": "Analytics"
+  },
   "description": {
     "ru": "Загруженность, финансы, архив и виджеты Dashboard.",
     "en": "Usage, finance, archive, and Dashboard widgets."
@@ -11,62 +14,144 @@
   "license": "MIT",
   "category": "analytics",
   "repository": "https://github.com/WASH-PRO-NEXT/wash-pro-next-analytics",
-  "dependencies": ["wash-pro-next-objects"],
+  "dependencies": [
+    "wash-pro-next-objects"
+  ],
   "minPlatformVersion": "0.1.0",
-  "compatibility": ["dynamic-api"],
+  "compatibility": [
+    "dynamic-api"
+  ],
   "menu": [
     {
-      "section": { "slug": "analytics", "title": { "ru": "Аналитика", "en": "Analytics" }, "order": 60 },
-      "item": { "path": "/usage", "label": { "ru": "Загруженность", "en": "Usage" }, "icon": "BarChart3", "order": 1 }
+      "section": {
+        "slug": "analytics",
+        "title": {
+          "ru": "Аналитика",
+          "en": "Analytics"
+        },
+        "order": 60
+      },
+      "item": {
+        "path": "/usage",
+        "label": {
+          "ru": "Загруженность",
+          "en": "Usage"
+        },
+        "icon": "BarChart3",
+        "order": 1
+      }
     },
     {
-      "section": { "slug": "analytics", "title": { "ru": "Аналитика", "en": "Analytics" }, "order": 60 },
-      "item": { "path": "/finance", "label": { "ru": "Финансы", "en": "Finance" }, "icon": "Wallet", "order": 2 }
+      "section": {
+        "slug": "analytics",
+        "title": {
+          "ru": "Аналитика",
+          "en": "Analytics"
+        },
+        "order": 60
+      },
+      "item": {
+        "path": "/finance",
+        "label": {
+          "ru": "Финансы",
+          "en": "Finance"
+        },
+        "icon": "Wallet",
+        "order": 2
+      }
     },
     {
-      "section": { "slug": "analytics", "title": { "ru": "Аналитика", "en": "Analytics" }, "order": 60 },
-      "item": { "path": "/archive", "label": { "ru": "Архив", "en": "Archive" }, "icon": "Archive", "order": 3 }
+      "section": {
+        "slug": "analytics",
+        "title": {
+          "ru": "Аналитика",
+          "en": "Analytics"
+        },
+        "order": 60
+      },
+      "item": {
+        "path": "/archive",
+        "label": {
+          "ru": "Архив",
+          "en": "Archive"
+        },
+        "icon": "Archive",
+        "order": 3
+      }
     }
   ],
   "widgets": [
     {
       "id": "analytics.finance-cash",
       "type": "stat",
-      "title": { "ru": "Наличная выручка", "en": "Cash revenue" },
+      "title": {
+        "ru": "Наличная выручка",
+        "en": "Cash revenue"
+      },
       "order": 10,
       "hostSlot": "finance-cash"
     },
     {
       "id": "analytics.finance-cashless",
       "type": "stat",
-      "title": { "ru": "Безналичная выручка", "en": "Cashless revenue" },
+      "title": {
+        "ru": "Безналичная выручка",
+        "en": "Cashless revenue"
+      },
       "order": 20,
       "hostSlot": "finance-cashless"
     },
     {
       "id": "analytics.finance-total",
       "type": "stat",
-      "title": { "ru": "Общая выручка", "en": "Total revenue" },
+      "title": {
+        "ru": "Общая выручка",
+        "en": "Total revenue"
+      },
       "order": 30,
       "hostSlot": "finance-total"
     },
     {
       "id": "analytics.finance-discounts",
       "type": "stat",
-      "title": { "ru": "Сумма скидок", "en": "Discount amount" },
+      "title": {
+        "ru": "Сумма скидок",
+        "en": "Discount amount"
+      },
       "order": 40,
       "hostSlot": "finance-discounts"
     },
     {
       "id": "analytics.charts",
       "type": "chart",
-      "title": { "ru": "Графики", "en": "Charts" },
+      "title": {
+        "ru": "Графики",
+        "en": "Charts"
+      },
       "order": 50,
       "hostSlot": "charts"
     }
   ],
   "permissions": [
-    { "id": "Analytics.View", "label": { "ru": "Просмотр аналитики", "en": "View analytics" }, "group": "Analytics" },
-    { "id": "Analytics.Export", "label": { "ru": "Экспорт аналитики", "en": "Export analytics" }, "group": "Analytics" }
-  ]
+    {
+      "id": "Analytics.View",
+      "label": {
+        "ru": "Просмотр аналитики",
+        "en": "View analytics"
+      },
+      "group": "Analytics"
+    },
+    {
+      "id": "Analytics.Export",
+      "label": {
+        "ru": "Экспорт аналитики",
+        "en": "Export analytics"
+      },
+      "group": "Analytics"
+    }
+  ],
+  "ui": {
+    "entry": "ui/src/index.ts",
+    "host": "dashboard-plugin-loader"
+  }
 }

@@ -1,7 +1,8 @@
 # wash-pro-next-analytics
 
-WASH-PRO NEXT domain component (Stage 2/3).
+WASH-PRO NEXT domain component (Stage 3).
 
-Menu, widgets, and permissions are declared in `wash-component.json`.
-Until Stage 3 completes, the UI pages still live in the platform dashboard;
-this repository is the source of truth for the component manifest and future code extraction.
+- `wash-component.json` — menu, widgets, permissions, UI entry
+- `ui/` — React pages (host Plugin Loader; `@dashboard/*` shell APIs)
+
+Developed in platform at `dashboard/src/plugins/wash-pro-next-analytics`, synced via `scripts/sync-component-ui.sh`.
